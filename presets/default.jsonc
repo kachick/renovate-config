@@ -42,11 +42,12 @@
   },
   "packageRules": [
     {
-      "description": "Group all dprint plugin updates into a single PR",
+      "description": "Group dprint plugin updates into a single PR when 2 or more updates are available",
       "matchManagers": [
         "custom.regex"
       ],
-      "groupName": "dprint plugins"
+      "groupName": "dprint plugins",
+      "minimumGroupSize": 2
     }
   ]
 }
