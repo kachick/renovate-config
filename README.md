@@ -16,10 +16,3 @@ Add the preset to your `renovate.jsonc`:
   ]
 }
 ```
-
-## Included Configurations
-
-- Uses WASM plugin updates from [kachick/renovate-config-dprint](https://github.com/kachick/renovate-config-dprint)
-- Schedules updates on Tuesday with a 7-day minimum release age
-- Disables semantic commits and Nix manager
-- Adds `dependencies` and `renovate` labels
