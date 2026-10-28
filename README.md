@@ -12,7 +12,7 @@ Add the preset to your `renovate.jsonc`:
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>kachick/renovate-config"
+    "github>kachick/renovate-config//default.jsonc"
   ]
 }
 ```
