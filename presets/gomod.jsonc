@@ -7,9 +7,6 @@
       "gomodTidy"
     ]
   },
-  "extends": [
-    "schedule:monthly"
-  ],
   "minimumReleaseAge": "7 days",
   "vulnerabilityAlerts": {
     "enabled": true,

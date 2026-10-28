@@ -6,9 +6,6 @@
   },
   // Use rangeStrategy "bump" so Renovate updates Cargo.toml together with Cargo.lock instead of lockfile-only.
   "rangeStrategy": "bump",
-  "extends": [
-    "schedule:monthly"
-  ],
   "minimumReleaseAge": "7 days",
   "vulnerabilityAlerts": {
     "enabled": true,

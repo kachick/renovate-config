@@ -31,9 +31,8 @@
   "npm": {
     "enabled": false
   },
-  "schedule": [
-    "on Tuesday"
-  ],
+  "prConcurrentLimit": 1,
+  "rebaseWhen": "behind-base-branch",
   "minimumReleaseAge": "7 days",
   "vulnerabilityAlerts": {
     "enabled": true,

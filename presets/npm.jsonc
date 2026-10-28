@@ -5,9 +5,6 @@
     "enabled": true
   },
   "rangeStrategy": "bump",
-  "extends": [
-    "schedule:monthly"
-  ],
   "minimumReleaseAge": "3 days",
   "vulnerabilityAlerts": {
     "enabled": true,
