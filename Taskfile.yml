@@ -15,7 +15,7 @@ tasks:
       - task: lint
   test:
     cmds:
-      - echo 'Update here'
+      - renovate-config-validator --strict .github/renovate.jsonc
   fmt:
     cmds:
       - dprint fmt
