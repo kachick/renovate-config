@@ -1,18 +1,25 @@
-# anylang-template
+# renovate-config
 
-[![CI Status](https://github.com/kachick/anylang-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kachick/anylang-template/actions/workflows/ci.yml?query=branch%3Amain+)
+[![CI Status](https://github.com/kachick/renovate-config/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kachick/renovate-config/actions/workflows/ci.yml?query=branch%3Amain+)
 
-A template that is not exclusive to one programming language.\
-Provides a basic setup for editors, documents, and GitHub Actions.
+Personal [shareable config presets](https://docs.renovatebot.com/config-presets/) for Renovate.
 
-## Checklist for new repositories
+## Usage
 
-When using this template for a project, review and update the following files:
+Add the preset to your `renovate.jsonc`:
 
-- [ ] `README.md` - Update project name, description, and CI badges
-- [ ] `Taskfile.yml` - Replace `test` command and add language-specific linters/formatters
-- [ ] `flake.nix` - Add required compilers, runtimes, or tools to `devShells`
-- [ ] `.gitignore` - Add build outputs and dependency directories
-- [ ] `typos.toml` - Clean up unused file exclusions and words
-- [ ] `.editorconfig` - Keep only needed language sections or adjust indentation
-- [ ] `.github/renovate.jsonc` - Enable package managers if needed
+```jsonc
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kachick"
+  ]
+}
+```
+
+## Included Configurations
+
+- Uses WASM plugin updates from [kachick/renovate-config-dprint](https://github.com/kachick/renovate-config-dprint)
+- Schedules updates on Tuesday with a 7-day minimum release age
+- Disables semantic commits and Nix manager
+- Adds `dependencies` and `renovate` labels
