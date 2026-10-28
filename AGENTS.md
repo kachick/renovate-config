@@ -7,4 +7,5 @@
 
 ## Renovate Configuration
 
-- Always use `.jsonc` instead of `.json` or `.json5` for Renovate configurations and presets.
+- Name the default preset `default.json` so users can use `github>kachick/renovate-config` without specifying a file path.
+- Use `.jsonc` for in-repository configurations like `.github/renovate.jsonc`.
