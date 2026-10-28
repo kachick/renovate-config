@@ -43,6 +43,14 @@
     "schedule": []
   },
   "packageRules": [
+    // Pinning unpinned references improves security immediately, so do not delay them with cooldown periods.
+    {
+      "description": "Disable minimumReleaseAge for pinDigest updates",
+      "matchUpdateTypes": [
+        "pinDigest"
+      ],
+      "minimumReleaseAge": null
+    },
     // Keep kachick actions unpinned so repositories can track branches like main for quick updates.
     {
       "description": "Do not pin digests for kachick's GitHub Actions and reusable workflows",
