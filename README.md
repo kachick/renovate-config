@@ -12,17 +12,17 @@ Add presets to your `renovate.jsonc`:
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>kachick/renovate-config//default.jsonc"
+    "github>kachick/renovate-config//presets/default.jsonc"
   ]
 }
 ```
 
 ### Available Presets
 
-- `default.jsonc`: Base configuration including GitHub Actions, dprint, and Docker.
-- `cargo.jsonc`: Rust / Cargo dependencies with `bump` range strategy.
-- `gomod.jsonc`: Go modules dependencies with `gomodTidy`.
-- `npm.jsonc`: Node.js / npm dependencies with `bump` range strategy.
+- `presets/default.jsonc`: Base configuration including GitHub Actions, dprint, and Docker.
+- `presets/cargo.jsonc`: Rust / Cargo dependencies with `bump` range strategy.
+- `presets/gomod.jsonc`: Go modules dependencies with `gomodTidy`.
+- `presets/npm.jsonc`: Node.js / npm dependencies with `bump` range strategy.
 
 Example for combining presets:
 
@@ -30,8 +30,8 @@ Example for combining presets:
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>kachick/renovate-config//default.jsonc",
-    "github>kachick/renovate-config//cargo.jsonc"
+    "github>kachick/renovate-config//presets/default.jsonc",
+    "github>kachick/renovate-config//presets/cargo.jsonc"
   ]
 }
 ```

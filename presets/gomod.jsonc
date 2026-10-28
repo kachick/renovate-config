@@ -15,5 +15,17 @@
     "enabled": true,
     "minimumReleaseAge": null,
     "schedule": []
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Disable Go version bumps in go.mod since toolchains are managed via Nix",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchDatasources": [
+        "golang-version"
+      ],
+      "enabled": false
+    }
+  ]
 }

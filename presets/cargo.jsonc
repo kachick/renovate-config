@@ -14,5 +14,17 @@
     "enabled": true,
     "minimumReleaseAge": null,
     "schedule": []
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Disable rust-version bumps in Cargo.toml since toolchains are managed via Nix",
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchDepTypes": [
+        "rust-version"
+      ],
+      "enabled": false
+    }
+  ]
 }
