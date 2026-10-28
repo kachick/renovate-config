@@ -20,6 +20,7 @@ Add presets to your `renovate.jsonc`:
 ### Available Presets
 
 - `presets/default.jsonc`: Base configuration including GitHub Actions, dprint, and Docker.
+- `presets/bundler.jsonc`: Ruby / Bundler dependencies with `bump` range strategy.
 - `presets/cargo.jsonc`: Rust / Cargo dependencies with `bump` range strategy.
 - `presets/gomod.jsonc`: Go modules dependencies with `gomodTidy`.
 - `presets/npm.jsonc`: Node.js / npm dependencies with `bump` range strategy.

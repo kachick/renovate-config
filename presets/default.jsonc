@@ -22,6 +22,9 @@
     "enabled": false
   },
   // Keep language-specific managers disabled by default so they are only enabled via dedicated presets.
+  "bundler": {
+    "enabled": false
+  },
   "cargo": {
     "enabled": false
   },

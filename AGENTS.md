@@ -9,4 +9,4 @@
 
 - Always use `.jsonc` instead of `.json` or `.json5` for Renovate configurations and presets.
 - Place all shared presets under the `presets/` directory.
-- Never let Renovate update compiler or runtime versions (such as Go versions in `go.mod`, Node engines in `package.json`, or `rust-version` in `Cargo.toml`) because toolchains are managed and synchronized through Nix and `bump-flake` workflows.
+- Never let Renovate update compiler or runtime versions (such as Go versions in `go.mod`, Node engines in `package.json`, Ruby versions in `Gemfile`, or `rust-version` in `Cargo.toml`) because toolchains are managed and synchronized through Nix and `bump-flake` workflows.
