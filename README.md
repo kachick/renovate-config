@@ -6,13 +6,32 @@ Personal [shareable config presets](https://docs.renovatebot.com/config-presets/
 
 ## Usage
 
-Add the preset to your `renovate.jsonc`:
+Add presets to your `renovate.jsonc`:
 
 ```jsonc
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>kachick/renovate-config//default.jsonc"
+  ]
+}
+```
+
+### Available Presets
+
+- `default.jsonc`: Base configuration including GitHub Actions, dprint, and Docker.
+- `cargo.jsonc`: Rust / Cargo dependencies with `bump` range strategy.
+- `gomod.jsonc`: Go modules dependencies with `gomodTidy`.
+- `npm.jsonc`: Node.js / npm dependencies with `bump` range strategy.
+
+Example for combining presets:
+
+```jsonc
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kachick/renovate-config//default.jsonc",
+    "github>kachick/renovate-config//cargo.jsonc"
   ]
 }
 ```

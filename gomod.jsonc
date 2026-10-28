@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "kachick's Renovate configuration for Go modules",
+  "gomod": {
+    "enabled": true,
+    "postUpdateOptions": [
+      "gomodTidy"
+    ]
+  },
+  "extends": [
+    "schedule:monthly"
+  ],
+  "minimumReleaseAge": "7 days",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "minimumReleaseAge": null,
+    "schedule": []
+  }
+}

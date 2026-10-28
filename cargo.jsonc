@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "kachick's Renovate configuration for Rust / Cargo",
+  "cargo": {
+    "enabled": true
+  },
+  // Use rangeStrategy "bump" so Renovate updates Cargo.toml together with Cargo.lock instead of lockfile-only.
+  "rangeStrategy": "bump",
+  "extends": [
+    "schedule:monthly"
+  ],
+  "minimumReleaseAge": "7 days",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "minimumReleaseAge": null,
+    "schedule": []
+  }
+}

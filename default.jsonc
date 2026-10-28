@@ -2,22 +2,51 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "kachick's default Renovate configuration",
   "dependencyDashboard": true,
-  "enabledManagers": [
-    "custom.regex"
-  ],
+  // Include GitHub Actions and dprint by default to minimize API requests and maintenance across all repositories.
   "extends": [
     ":semanticCommitsDisabled",
+    "helpers:pinGitHubActionDigests",
     "github>kachick/renovate-config-dprint#1.4.0"
   ],
   "labels": [
     "dependencies",
     "renovate"
   ],
+  "dockerfile": {
+    "enabled": true
+  },
+  "docker-compose": {
+    "enabled": true
+  },
   "nix": {
+    "enabled": false
+  },
+  // Keep language-specific managers disabled by default so they are only enabled via dedicated presets.
+  "cargo": {
+    "enabled": false
+  },
+  "gomod": {
+    "enabled": false
+  },
+  "npm": {
     "enabled": false
   },
   "schedule": [
     "on Tuesday"
   ],
-  "minimumReleaseAge": "7 days"
+  "minimumReleaseAge": "7 days",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "minimumReleaseAge": null,
+    "schedule": []
+  },
+  "packageRules": [
+    {
+      "description": "Group all dprint plugin updates into a single PR",
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "groupName": "dprint plugins"
+    }
+  ]
 }
