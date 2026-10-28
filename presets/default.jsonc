@@ -43,6 +43,18 @@
     "schedule": []
   },
   "packageRules": [
+    // Keep kachick actions unpinned so repositories can track branches like main for quick updates.
+    {
+      "description": "Do not pin digests for kachick's GitHub Actions and reusable workflows",
+      "matchDepTypes": [
+        "action",
+        "workflow"
+      ],
+      "matchPackageNames": [
+        "kachick/**"
+      ],
+      "pinDigests": false
+    },
     {
       "description": "Group dprint plugin updates into a single PR when 2 or more updates are available",
       "matchManagers": [
