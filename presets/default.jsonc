@@ -63,10 +63,14 @@
       ],
       "pinDigests": false
     },
+    // dprint plugins update frequently and formatters are low risk, so schedule monthly to reduce PR noise.
     {
-      "description": "Group dprint plugin updates into a single PR when 2 or more updates are available",
+      "description": "Group dprint plugin updates into a single PR when 2 or more updates are available, scheduled monthly",
       "matchManagers": [
         "custom.regex"
+      ],
+      "extends": [
+        "schedule:monthly"
       ],
       "groupName": "dprint plugins",
       "minimumGroupSize": 2
