@@ -6,26 +6,9 @@ Personal [shareable config presets](https://docs.renovatebot.com/config-presets/
 
 ## Usage
 
+See the [presets](presets/) directory for available presets.
+
 Add presets to your `renovate.jsonc`:
-
-```jsonc
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>kachick/renovate-config//presets/default.jsonc"
-  ]
-}
-```
-
-### Available Presets
-
-- `presets/default.jsonc`: Base configuration including GitHub Actions, dprint, and Docker.
-- `presets/bundler.jsonc`: Ruby / Bundler dependencies with `bump` range strategy.
-- `presets/cargo.jsonc`: Rust / Cargo dependencies with `bump` range strategy.
-- `presets/gomod.jsonc`: Go modules dependencies with `gomodTidy`.
-- `presets/npm.jsonc`: Node.js / npm dependencies with `bump` range strategy.
-
-Example for combining presets:
 
 ```jsonc
 {
@@ -36,3 +19,7 @@ Example for combining presets:
   ]
 }
 ```
+
+## Limitations
+
+- **Lockfile-only transitive security updates**: Renovate does not update transitive (nested) dependencies in lockfiles for security fixes. Keep Dependabot security updates enabled until upstream resolves this limitation. See [#2](https://github.com/kachick/renovate-config/issues/2) and [renovatebot/renovate#46377](https://github.com/renovatebot/renovate/issues/46377).
