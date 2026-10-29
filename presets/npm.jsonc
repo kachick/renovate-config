@@ -21,6 +21,22 @@
         "engines"
       ],
       "enabled": false
+    },
+    // Do not disable major updates for all @types/* packages.
+    // Doing so avoids mismatches with library versions, but makes it hard to notice major library updates.
+    // Keep this restriction only on @types/node because the Node.js runtime is tied to flake.nix.
+    {
+      "description": "Disable major updates for @types/node since runtime versions are managed via Nix",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "@types/node"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": false
     }
   ]
 }
