@@ -6,7 +6,7 @@
   "extends": [
     ":semanticCommitsDisabled",
     "helpers:pinGitHubActionDigests",
-    "github>kachick/renovate-config-dprint#1.4.0"
+    "github>kachick/renovate-config-dprint"
   ],
   "labels": [
     "dependencies",
