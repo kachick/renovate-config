@@ -22,6 +22,18 @@
         "ruby-version"
       ],
       "enabled": false
+    },
+    // Group rubocop ecosystem gems together when 2 or more updates are available to avoid CI churn and conflicts.
+    {
+      "description": "Group rubocop dependencies into a single PR when 2 or more updates are available",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchPackageNames": [
+        "*rubocop*"
+      ],
+      "groupName": "rubocop dependencies",
+      "minimumGroupSize": 2
     }
   ]
 }
