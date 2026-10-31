@@ -69,6 +69,9 @@
       "matchManagers": [
         "custom.regex"
       ],
+      "matchDepTypes": [
+        "dprint-plugin"
+      ],
       "extends": [
         "schedule:monthly"
       ],
